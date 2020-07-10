@@ -10,9 +10,15 @@
         "destination": "/tmp/site/static_site.cfg"
       },
       {
+        "type": "shell",
+        "inline": [
+          "mkdir /tmp/site/static-site-src"
+        ]
+      },
+      {
         "type": "file",
         "source": "./examples/ansible/static-site-src",
-        "destination": "/tmp/site/"
+        "destination": "/tmp/site/static-site-src"
       },
       {
         "type": "ansible",
