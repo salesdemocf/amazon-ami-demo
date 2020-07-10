@@ -12,7 +12,7 @@
       {
         "type": "file",
         "source": "./examples/ansible/static-site-src",
-        "destination": "/tmp/site/static-site-src"
+        "destination": "/tmp/site/"
       },
       {
         "type": "ansible",
