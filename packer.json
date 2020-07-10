@@ -7,12 +7,12 @@
       {
         "type": "file",
         "source": "./examples/ansible/static_site.cfg",
-        "destination": "/home/ec2-user/static_site.cfg"
+        "destination": "/home/foo/static_site.cfg"
       },
       {
         "type": "file",
         "source": "./examples/ansible/static-site-src",
-        "destination": "/home/ec2-user/static-site-src"
+        "destination": "/home/foo/static-site-src"
       },
       {
         "type": "ansible",

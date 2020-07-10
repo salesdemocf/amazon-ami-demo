@@ -11,7 +11,7 @@
       become: yes
     - name: copy the nginx config file and restart nginx
       copy:
-        src: /home/ec2-user/static_site.cfg
+        src: /home/foo/static_site.cfg
         dest: /etc/nginx/sites-available/static_site.cfg
       become: yes
     - name: create symlink
@@ -22,8 +22,8 @@
       become: yes
     - name: copy the content of the web site
       copy:
-        src: /home/ec2-user/static-site-src/
-        dest: /home/ec2-user/static-site
+        src: /home/foo/static-site-src/
+        dest: /home/foo/static-site
     - name: restart nginx
       service:
         name: nginx
