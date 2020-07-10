@@ -5,18 +5,14 @@
     },
     "provisioners": [
       {
-        "type": "shell",
-        "inline": ["sudo mkdir /home/site", "sudo chown 777 /home/site"]
-      },
-      {
         "type": "file",
         "source": "./examples/ansible/static_site.cfg",
-        "destination": "/home/site/static_site.cfg"
+        "destination": "/tmp/site/static_site.cfg"
       },
       {
         "type": "file",
         "source": "./examples/ansible/static-site-src",
-        "destination": "/home/site/static-site-src"
+        "destination": "/tmp/site/static-site-src"
       },
       {
         "type": "ansible",
