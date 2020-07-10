@@ -5,32 +5,9 @@
     },
     "provisioners": [
       {
-        "type": "shell",
-        "inline": [
-          "sleep 15",
-          "sudo apt-get update",
-          "sudo apt-get install -y aptitude python"
-        ]
-      },
-      {
         "type": "ansible",
-        "extra_arguments": [
-          "--become",
-          "--become-method=sudo",
-          "--become-user=ec2-user"
-        ],
         "user": "ec2-user",
-        "playbook_file": "../ansible-playbooks/setup_ubuntu1804/playbook.yml"
-      },
-      {
-        "type": "ansible",
-        "extra_arguments": [
-          "--become",
-          "--become-method=sudo",
-          "--become-user=ec2-user"
-        ],
-        "user": "ec2-user",
-        "playbook_file": "../ansible-playbooks/apache_ubuntu1804/playbook.yml"
+        "playbook_file": "./examples/ansible/nginx.yaml"
       }
     ],
     "builders": [
