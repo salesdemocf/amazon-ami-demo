@@ -13,7 +13,7 @@ steps:
     stage: clone   
   CreatePackerImage:
     title: Creating AMI...
-    image: hashicorp/packer
+    image: dustinvanbuskirk/packer-ansible:1.6.0-2.9.7-r0
     working_directory: ${{clone}}
     commands:
       - packer validate packer.json
