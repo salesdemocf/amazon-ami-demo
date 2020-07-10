@@ -1,0 +1,23 @@
+version: '1.0'
+stages:
+  - clone
+  - build
+  - deploy
+steps:
+  clone:
+    title: Cloning repository...
+    type: git-clone
+    repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
+    git: github
+    revision: ${{CF_REVISION}}
+    stage: clone   
+  CreatePackerImage:
+    title: Creating AMI...
+    stage: build
+    image: hashicorp/packer
+    working_directory: ${{clone}}
+    commands:
+      - packer validate packer.json
+      - packer build -var 'aws_access_key=${{AWS_ACCESS_KEY_ID}}' -var 'aws_secret_key=${{AWS_SECRET_ACCESS_KEY}}' packer.json
+    stage: build
+     
