@@ -15,9 +15,7 @@
       {
         "type": "ansible",
         "extra_arguments": [
-          "--become",
-          "--become-method=sudo",
-          "--become-user=root"
+          "--sudo"
         ],
         "user": "ec2-user",
         "playbook_file": "../ansible-playbooks/apache_ubuntu1804/playbook.yml"
