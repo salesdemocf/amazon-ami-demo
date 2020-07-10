@@ -11,7 +11,7 @@
       become: yes
     - name: copy the nginx config file and restart nginx
       copy:
-        src: ./examples/ansible/static_site.cfg
+        src: /codefresh/volume/amazon-ami-demo/examples/ansible/files/static_site.cfg
         dest: /etc/nginx/sites-available/static_site.cfg
       become: yes
     - name: create symlink
@@ -22,7 +22,7 @@
       become: yes
     - name: copy the content of the web site
       copy:
-        src: ./examples/ansible/static-site-src/
+        src: /codefresh/volume/amazon-ami-demo/examples/ansible/files/static-site-src/
         dest: /home/ec2-user/static-site
     - name: restart nginx
       service:
