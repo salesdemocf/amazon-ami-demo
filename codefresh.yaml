@@ -21,7 +21,7 @@ steps:
   CreatePackerImage:
     title: Creating AMI...
     image: dustinvanbuskirk/packer-ansible:1.6.0-2.9.7-r0
-    working_directory: ${{clone}}
+    working_directory: ${{ClonePackerRepository}}
     commands:
       - packer validate packer.json
       - packer build -var 'aws_access_key=${{AWS_ACCESS_KEY_ID}}' -var 'aws_secret_key=${{AWS_SECRET_ACCESS_KEY}}' packer.json
