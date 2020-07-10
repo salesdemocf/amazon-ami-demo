@@ -24,7 +24,7 @@ steps:
     working_directory: ${{ClonePackerRepository}}
     commands:
       - packer validate packer.json
-      - packer build -var 'aws_access_key=${{AWS_ACCESS_KEY_ID}}' -var 'aws_secret_key=${{AWS_SECRET_ACCESS_KEY}}' packer.json-
+      - packer build -var 'aws_access_key=${{AWS_ACCESS_KEY_ID}}' -var 'aws_secret_key=${{AWS_SECRET_ACCESS_KEY}}' packer.json
       - AMI_ID=$(jq -r '.builds[-1].artifact_id' manifest.json | cut -d ":" -f2) >> /meta/env_vars_to_export
     stage: build
     on_success: 
