@@ -13,7 +13,6 @@ steps:
     stage: clone   
   CreatePackerImage:
     title: Creating AMI...
-    stage: build
     image: hashicorp/packer
     working_directory: ${{clone}}
     commands:
