@@ -14,7 +14,7 @@ steps:
   CloneAnsibleRepository:
     title: Cloning Ansible repository...
     type: git-clone
-    repo: do-community/ansible-playbooks
+    repo: dustinvanbuskirk/ansible-playbooks
     git: github
     revision: master
     stage: clone   
