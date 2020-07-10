@@ -6,7 +6,7 @@
     "provisioners": [
       {
         "type": "shell",
-        "inline": ["mkdir /home/site"]
+        "inline": ["sudo mkdir /home/site", "sudo chown 777 /home/site"]
       },
       {
         "type": "file",
