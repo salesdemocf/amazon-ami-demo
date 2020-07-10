@@ -11,7 +11,7 @@
       },
       {
         "type": "file",
-        "source": "/examples/ansible/static-site-src",
+        "source": "./examples/ansible/static-site-src",
         "destination": "/home/ec2-user/static-site-src"
       },
       {
