@@ -5,14 +5,18 @@
     },
     "provisioners": [
       {
+        "type": "shell",
+        "inline": ["mkdir /home/site"]
+      },
+      {
         "type": "file",
         "source": "./examples/ansible/static_site.cfg",
-        "destination": "/home/foo/static_site.cfg"
+        "destination": "/home/site/static_site.cfg"
       },
       {
         "type": "file",
         "source": "./examples/ansible/static-site-src",
-        "destination": "/home/foo/static-site-src"
+        "destination": "/home/site/static-site-src"
       },
       {
         "type": "ansible",
