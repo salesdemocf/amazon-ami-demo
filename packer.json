@@ -7,7 +7,7 @@
       {
         "type": "ansible",
         "user": "ec2-user",
-        "playbook_file": "./playbook.yaml"
+        "playbook_file": "../ansible-playbooks/apache_ubuntu1804/playbook.yaml"
       }
     ],
     "builders": [
