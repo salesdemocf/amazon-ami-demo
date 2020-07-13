@@ -5,6 +5,22 @@
     },
     "provisioners": [
       {
+        "type": "shell",
+        "inline": [
+            "mkdir -p /tmp/site/static-site-src"
+        ]
+      },
+      {
+        "type": "file",
+        "source": "./examples/ansible/static_site.cfg",
+        "destination": "/tmp/site/static_site.cfg"
+      },
+      {
+        "type": "file",
+        "source": "./examples/ansible/static-site-src",
+        "destination": "/tmp/site/static-site-src"
+      },
+      {
         "type": "ansible",
         "user": "ec2-user",
         "playbook_file": "./examples/ansible/nginx.yaml"
