@@ -29,6 +29,7 @@
         src: /tmp/site/static-site-src/
         dest: /www/data/static-site-src
         remote_src: yes
+      become: yes
     - name: restart nginx
       service:
         name: nginx
