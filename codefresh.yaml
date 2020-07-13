@@ -26,4 +26,4 @@ steps:
           - entity_id: ${{CF_BUILD_ID}}
             entity_type: build
             annotations:
-            - amazon_ami: $AMI_ID
+            - amazon_ami: ${{AMI_ID}}
