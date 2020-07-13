@@ -12,12 +12,12 @@
       },
       {
         "type": "file",
-        "source": "./examples/ansible/static_site.cfg",
+        "source": "./examples/ansible/files/static_site.cfg",
         "destination": "/tmp/site/static_site.cfg"
       },
       {
         "type": "file",
-        "source": "./examples/ansible/static-site-src",
+        "source": "./examples/ansible/files/static-site-src",
         "destination": "/tmp/site/static-site-src"
       },
       {
