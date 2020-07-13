@@ -27,3 +27,9 @@ steps:
             entity_type: build
             annotations:
             - amazon_ami: ${{AMI_ID}}
+  RunTerraformPlan:
+    title: Running Terraform Plan
+    image: alpine
+    working_directory: ${{ClonePackerRepository}}
+    commands:
+      - echo "Building EC2 instance with AMI:${{AMI_ID}}"
