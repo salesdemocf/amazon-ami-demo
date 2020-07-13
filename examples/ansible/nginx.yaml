@@ -24,7 +24,7 @@
     - name: copy the content of the web site
       copy:
         src: /tmp/site/static-site-src/
-        dest: /home/ec2-user/static-site
+        dest: /home/ec2-user/
         remote_src: yes
     - name: restart nginx
       service:
