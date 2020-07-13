@@ -21,10 +21,12 @@
         dest: /etc/nginx/sites-enabled/default
         state: link
       become: yes
+    - name: create site directory
+      file: path=/www/data state=directory mode=0755
     - name: copy the content of the web site
       copy:
         src: /tmp/site/static-site-src/
-        dest: /home/ec2-user/
+        dest: /www/data/static-site-src
         remote_src: yes
     - name: restart nginx
       service:
