@@ -25,5 +25,5 @@ steps:
     image: alpine
     working_directory: ${{ClonePackerRepository}}
     commands:
-      - echo "Building EC2 instance with AMI:$AMI_ID"
+      - echo "Building EC2 instance with AMI:${{AMI_ID}}"
     stage: deploy
